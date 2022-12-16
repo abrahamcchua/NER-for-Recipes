@@ -1,3 +1,8 @@
 12/16/2022 - 18:09
 Scraped the links to the recipes:
 - Working on a way to scrape to the end of the cookbook automatically
+
+12/16/2022 - 20:47
+(Bug-Fix)
+Fixed the structure of the output file to become more logical.
+The scraper will now skip non-recipe links

@@ -1,16 +1,27 @@
 import scrapy
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 
+
+#https://www.budgetbytes.com/recipe-catalog/2/
 
 class SpiderSpider(scrapy.Spider):
     name = 'spider'
-    start_urls = ["https://www.budgetbytes.com/recipe-catalog/"]
-
+    start_urls = ["https://www.budgetbytes.com/recipe-catalog/page/2/"]
+    # rules = (
+        
+    # )
     
     def parse(self, response):
-        for post in response.css('div.site-container'):
-            yield {
-                    'title': post.css('h3::text').getall(),
-                    'costing': post.css('div.post-summary__content').css('span::text').getall(),
-                    'link': post.css('div.archive-post-listing a::attr(href)').getall()
-                    }
-                
+        for item in response.css('article.post-summary'):
+            title = item.css('h3::text').get()
+            costing = item.css('div.post-summary__content').css('span::text').get(),
+            link = item.css('a::attr(href)').get()
+            if costing[0] != None:
+                yield {
+                        'title': title,
+                        'costing': costing,
+                        'link': link
+                        }
+            else:
+                continue
