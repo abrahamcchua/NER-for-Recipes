@@ -6,3 +6,4 @@ Scraped the links to the recipes:
 (Bug-Fix)
 Fixed the structure of the output file to become more logical.
 The scraper will now skip non-recipe links
+
