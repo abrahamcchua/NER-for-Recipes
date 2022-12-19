@@ -7,3 +7,12 @@ Scraped the links to the recipes:
 Fixed the structure of the output file to become more logical.
 The scraper will now skip non-recipe links
 
+12/17/2022 - 18:08
+(Update)
+Finished parsing the raw data to be used for the Machine Learning Project.
+Will start to label the data for the NER project.
+
+
+12/19/2022 -16:48
+(Update)
+Added preprocessing to the unlabelled NER dataset
