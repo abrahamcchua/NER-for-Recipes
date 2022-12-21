@@ -7,10 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'WebsiteLinkParser'
+BOT_NAME = 'DataParser'
 
-SPIDER_MODULES = ['WebsiteLinkParser.spiders']
-NEWSPIDER_MODULE = 'WebsiteLinkParser.spiders'
+SPIDER_MODULES = ['DataParser.spiders']
+NEWSPIDER_MODULE = 'DataParser.spiders'
 
 
 

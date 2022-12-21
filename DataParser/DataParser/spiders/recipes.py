@@ -13,7 +13,9 @@ class RecipesSpider(scrapy.Spider):
     def preprocess(self, instruction):
         # Combines lists and removes punctuations
         instruction = ' '.join(instruction)
-        return instruction.translate(str.maketrans('', '', string.punctuation))
+        # Punctuations to be removed except '-'
+        punctuations_to_be_removed = string.punctuation.replace('-', '')
+        return [instruction.translate(str.maketrans('', '', punctuations_to_be_removed))]
      
     
     def remove_space(self, list):
