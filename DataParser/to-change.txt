@@ -1,0 +1,37 @@
+# Data points that are confusing.
+1. 18 uses pie crusts 
+
+# Data to be preprocessed
+1. [33, 44] 1 12 need to replace preprocess to 1/12
+2. 36 The word another is misspelled as 'anohter'
+3. 61 25 should be separated by a '.', making it 2.5
+4. 80, 86, 165, 185 should be separated by '/' making it 1/4
+5. 81, 92, 208 12 should be separed by '/' making it 1/2
+6. 87 Separate sauceand to 'sauce', 'and'
+7. 88 12 and 14 to 1/2 and 1/4
+8. 100 34 to 3/4
+9. 45, 53, 138, 148, 154, 164  15 to 1.5
+10. 147 might be confusing
+11. 179 45 to 4.5
+
+
+
+# Labels include:
+1. Cookware - Oven, skillet, pan
+    a. Remove Fridge, Lid
+2. Ingredient - Salt
+    a. Remove part of ingredient like garlic head, unless it's protein i.e. Pork Butt, Chicken Wing
+    b. Separate output from ingredient, remove liquid from ingredients - if i.e. bacon fat only annotate bacon, apple juice only annotate apple
+    c. Aluminum foil, parchment paper, paper towels are considered as ingredients since they are disposable
+    d. Pasta Water should be annotated separately
+3. Measurement - 1 cup
+    a. Does not include numbers that do not pertain to measurement like 6 pieces or 2 baking pans
+    b. Includes nxn 
+    c. Include Clove as a form of Measurement 
+4. Time - 30 Minutes 
+5. Temperature - Farenheit 
+    a. Exact Temperature
+
+
+# Learnings:
+I preprocessed the data too much, I should have only removed trailing periods, and question marks
