@@ -21,3 +21,24 @@ Added preprocessing to the unlabelled NER dataset
 12/19/2022 -15:26
 (Update)
 Renamed folder to DataParser, also removed '-' from the preprocessing process.
+
+
+1/14/2023 - 18:28
+(Update)
+Finished labelling and preprocessing the raw data.
+- to-change.txt provided rules to help the labelling process become 
+more  constant, it also contains a number of changes and insights that 
+was gained from the labelling period. It can be used to help in 
+relabeling the data.
+- The raw labelled data is stored withint Labelled-data.json
+- The preprocessed dataset is found in dataset.csv
+- The logic used to preprocess the data can be found in pre-processor.py
+
+
+1/17/2023 - 21:01
+(Update)
+Finished training the NER Model:
+- The model was trained on google collab, to make the training process faster
+- Most values for the Precision, Recall, F1_Score of the model on different entities were above 0.80
+- Only value that was below 0.8 was the recall for measurement
+- The model making an inference can be seen in Inference.ipynb
