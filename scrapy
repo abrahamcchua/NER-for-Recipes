@@ -1,3 +1,3 @@
 scrapy startproject WebsiteLinkParser
 
-scrapy genspider spider output.com
+scrapy genspider spider output

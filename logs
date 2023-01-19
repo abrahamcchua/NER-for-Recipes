@@ -35,10 +35,19 @@ relabeling the data.
 - The logic used to preprocess the data can be found in pre-processor.py
 
 
-1/17/2023 - 21:01
+1/17/2023 - 21:02
 (Update)
 Finished training the NER Model:
 - The model was trained on google collab, to make the training process faster
 - Most values for the Precision, Recall, F1_Score of the model on different entities were above 0.80
 - Only value that was below 0.8 was the recall for measurement
 - The model making an inference can be seen in Inference.ipynb
+
+
+1/19/2023 - 20:53
+(Refactoring and Documentation)
+Retrained the model with 20 epochs and updated the different relevant json files
+Finished refactoring and placing documentation in:
+- Architecture_NER_deeplearning.ipynb
+- Inference.ipynb
+Need to finish refactoring and placing documentations in the DataParser folder and NER/Preprocessing

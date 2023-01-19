@@ -3,7 +3,9 @@ import scrapy
 
 
 class linkSpider(scrapy.Spider):
+    # Name is used for the scrapy shell
     name = 'link'
+    # There were 119 different recipe-catalog pages when this data parser was made
     start_urls = [ "https://www.budgetbytes.com/recipe-catalog/page/"+str(i)+"/" for i in range(1, 119)]
 
     

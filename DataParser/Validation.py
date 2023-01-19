@@ -22,8 +22,10 @@ print(len(test_list), len(truth_list))
 
 # Print the links that were not parsed
 [print(l) for l in truth_list if l not in test_list]
+
+
 # The instruction on how to prepare the meal is not given
 # https://www.budgetbytes.com/mini-garden-turkey-loaf-meal/
-# The instructions follow a difference format compared to the others
+# The instruction follow a different format compared to the others
 # https://www.budgetbytes.com/picnic-potato-salad/
 
