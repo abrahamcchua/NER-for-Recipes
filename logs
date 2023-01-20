@@ -51,3 +51,10 @@ Finished refactoring and placing documentation in:
 - Architecture_NER_deeplearning.ipynb
 - Inference.ipynb
 Need to finish refactoring and placing documentations in the DataParser folder and NER/Preprocessing
+
+
+1/20/2023 - 18:26
+(Refactoring and Documentation)
+Finished placing documentations to the different python files
+Also renamed NER/Preprocessing/pre-processor.py to preprocessor.py
+Updated the scrapy file to indicate the different cli commands used to web parse. 
