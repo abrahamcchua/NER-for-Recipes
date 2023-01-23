@@ -2,3 +2,5 @@ __pycache__/
 logs
 # Ignore Trained Model
 ner_model_20e.h5
+ner_model_30e.h5
+.env

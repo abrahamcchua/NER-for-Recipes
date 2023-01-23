@@ -58,3 +58,11 @@ Need to finish refactoring and placing documentations in the DataParser folder a
 Finished placing documentations to the different python files
 Also renamed NER/Preprocessing/pre-processor.py to preprocessor.py
 Updated the scrapy file to indicate the different cli commands used to web parse. 
+
+
+1/23/2023 -
+(Update)
+Retrained the model with 10 more epochs, scored higher in evaluation metrics
+Combined the different mapping dicts into one
+Finished creating the backend for the prediction model
+Also added the necessary documentation for the corresponding files
