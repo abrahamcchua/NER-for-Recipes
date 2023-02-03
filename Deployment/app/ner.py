@@ -13,10 +13,9 @@ except:
 # Machine Learning Frameworks
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import tensorflow as tf
-import nltk
 from nltk.tokenize import word_tokenize
-nltk.data.path.append("/tmp")
-nltk.download("punkt", download_dir="/tmp")
+
+
 
 '''
 The prediction script for the project
@@ -46,7 +45,6 @@ class ner_model():
     
     def get_mapping_dict(self, fname):
         # Read and return the json file
-        os.chdir("..")
         with open(fname, 'r') as fcc_file:
            return json.load(fcc_file)
        
@@ -133,7 +131,6 @@ class ner_model():
                     if prefix == "B":
                         output_dict[label].append(word) 
                     else:
-                        
                         # Since the indexing starts at zero, subtracting one from the len is important
                         l = len(output_dict[label]) - 1
                         # Add the predicted word to the entry in the list

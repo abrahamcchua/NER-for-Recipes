@@ -1,0 +1,5 @@
+# Build docker image
+docker build -t ner_for_recipes . 
+
+# Run the docker image in port 80
+docker run -p 80:80 ner_for_recipes

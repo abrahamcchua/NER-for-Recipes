@@ -60,9 +60,14 @@ Also renamed NER/Preprocessing/pre-processor.py to preprocessor.py
 Updated the scrapy file to indicate the different cli commands used to web parse. 
 
 
-1/23/2023 -
+1/23/2023 - 17:20
 (Update)
 Retrained the model with 10 more epochs, scored higher in evaluation metrics
 Combined the different mapping dicts into one
 Finished creating the backend for the prediction model
 Also added the necessary documentation for the corresponding files
+
+2/3/2023 - 19:03
+(Update)
+Restructured the application to be production ready
+Created a docker image for the NER application

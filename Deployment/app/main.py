@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 # Own Module
-from ner import ner_model
+from app.ner import ner_model
 
 '''
 The backend script for the project
