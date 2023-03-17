@@ -82,3 +82,8 @@ Documentation:
 - Found some grammatical errors in some of my documentation, adjust these accordingly
 - Renamed "to-change.txt" to "Rules_&_Recommendations.txt"
 - Added a more comprehensive documentation in Read_Me.ipynb
+
+
+3/17/2023 - 13:30
+(Refactoring)
+Changed NER.py so that the model is only loaded once now instead of it being loaded everytime there's a new POST request.

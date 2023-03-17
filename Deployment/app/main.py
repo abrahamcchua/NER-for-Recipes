@@ -17,6 +17,7 @@ class Text(BaseModel):
     text: str
 
 app = FastAPI()
+model_instance = ner_model()
 
 @app.get("/")
 def initialize():
@@ -28,7 +29,7 @@ def initialize():
 def root(
     text: Text,
 ):
-    return ner_model(text.text).get_predicted_entities() 
+    return model_instance.get_predicted_entities(text.text) 
 
 
 # if __name__ == "__main__":

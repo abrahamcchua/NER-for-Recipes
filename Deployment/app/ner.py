@@ -30,8 +30,7 @@ The prediction script for the project
 
 
 class ner_model():
-    def __init__(self, text):
-        self.text = text
+    def __init__(self):
         dir = os.getenv('DIR')
         mapping_path = dir + os.getenv('MAPPING')
         mapping_dict = self.get_mapping_dict(mapping_path)
@@ -82,7 +81,7 @@ class ner_model():
         return preprocessed_list
     
     
-    def get_predicted_entities(self, unique=True):
+    def get_predicted_entities(self, text, unique=True):
         """
         Main highlight of function "get_predicted_entities"
         Summary:
@@ -92,7 +91,7 @@ class ner_model():
         -A dictionary 
         """
         # word_tokenize returns a list of tokenized strings
-        test = word_tokenize(self.get_preprocess_text(self.text))
+        test = word_tokenize(self.get_preprocess_text(text))
         preprocessed_list = self.get_preprocessed_list(test)
         # p stands for the probabilities predicted by the model on the input text
         p = self.model.predict(np.array([preprocessed_list[0]]))
