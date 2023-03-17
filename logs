@@ -71,3 +71,14 @@ Also added the necessary documentation for the corresponding files
 (Update)
 Restructured the application to be production ready
 Created a docker image for the NER application
+
+
+3/17/2023 - 13:09
+(Bug Fix & Documentation)
+Bug Fix:
+- Found & fixed a bug found in Preprocessing/preprocessor.py
+- The bug did not give the correct position of tags that started with I- for the output file 
+Documentation:
+- Found some grammatical errors in some of my documentation, adjust these accordingly
+- Renamed "to-change.txt" to "Rules_&_Recommendations.txt"
+- Added a more comprehensive documentation in Read_Me.ipynb

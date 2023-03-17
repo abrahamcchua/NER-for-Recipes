@@ -1,5 +1,6 @@
 # Data points that are confusing.
 1. 18 uses pie crusts 
+2. 147 might be confusing
 
 # Data to be preprocessed
 1. [33, 44] 1 12 need to replace preprocess to 1/12
@@ -11,7 +12,6 @@
 7. 88 12 and 14 to 1/2 and 1/4
 8. 100 34 to 3/4
 9. 45, 53, 138, 148, 154, 164  15 to 1.5
-10. 147 might be confusing
 11. 179 45 to 4.5
 
 
@@ -31,7 +31,20 @@
 4. Time - 30 Minutes 
 5. Temperature - Farenheit 
     a. Exact Temperature
+6. Add-ons - Bread
+    a. Things that are not required to complete the recipe but can be beneficial.
 
 
-# Learnings:
-I preprocessed the data too much, I should have only removed trailing periods, and question marks
+# Challenges 
+- Did not know how to make scrapy to follow links within pages
+    - Decided to use two different spiders to solve the issue
+- Kept on forgetting the different scrapy cli
+    - Decided to create file named scrapy that contains a mini-documentation for the framework to help make the project run smoother
+- The extracted links and recipes did not equal to each other
+    - Created Validation.py to find out why they were not equal
+
+# Recommandations:
+1. Use a more varied data source
+2. I should have defined the business problem prior to labelling
+3. I preprocessed the data too much, I should have only removed trailing periods, and question marks
+4. Implementation of a logging and feedback aspect of the api

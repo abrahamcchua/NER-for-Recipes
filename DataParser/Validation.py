@@ -27,6 +27,6 @@ print(len(test_list), len(truth_list))
 # Checking Manually why it did not work
 # The instruction on how to prepare the meal is not given
 # https://www.budgetbytes.com/mini-garden-turkey-loaf-meal/
-# The instruction follow a different format compared to the others
+# The instruction follows a different format compared to the others
 # https://www.budgetbytes.com/picnic-potato-salad/
 

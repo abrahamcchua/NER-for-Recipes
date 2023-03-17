@@ -4,3 +4,4 @@ logs
 ner_model_30e.h5
 dependencies
 .env
+venv

@@ -104,7 +104,7 @@ class preprocessor():
         # Summary:
         # c Stands for counter to be used to skip annotations that have more than one word in it
         # In Depth Explanation:
-        # This is essential since the logic used to determine whether word had a label 
+        # This is essential since the logic used to determine whether a word has a label 
         # is if the starting len of the word is in the dictionary d
         # Without the use of the variable the logic would create a duplicate row for it with label 'O' 
         c = 0
@@ -144,13 +144,30 @@ class preprocessor():
                 if ' ' in d[start][1]:
                     # Since there is more than one word split the phrase into words
                     t = d[start][1].split()
+                    
+                    # Inititilizing the list that will contain length of each of the words
+                    word_length_list = []
                     for j in range(len(t)):
+                        
+                        # logic to add the length of each of the words
+                        word_length_list.append(len(t[j]))
+                        
                         # B- stands for begining tag, I- stands for inside tag
                         if j == 0:
                             writer.writerow([i, t[j], "B-" + label, start, end])
+                            
+                            # Initializing the start position of labels that start with I-
+                            i_start = end + 1
                         else:
-                            writer.writerow([i, t[j], "I-" + label, start, end])
-                                
+                            # Row #508-511 
+                            # Interesting to check, since it is one of the entities that has 4 words
+                            # This makes some algorithms that can solve the issue for 2 words not applicable for 3 or more words.
+                            
+                            # Logic to get the appropriate length of tags that start with I-
+                            i_end = i_start + word_length_list[j]
+                            writer.writerow([i, t[j], "I-" + label, i_start, i_end])
+                            i_start = i_end + 1
+                            
                     # Minus one was implemented since t_words has a leading blank space
                     c += len(t)-1
                 else:
