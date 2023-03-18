@@ -87,3 +87,10 @@ Documentation:
 3/17/2023 - 13:30
 (Refactoring)
 Changed NER.py so that the model is only loaded once now instead of it being loaded everytime there's a new POST request.
+
+
+3/18/2023 - 12:35
+(Refactoring & Documentation)
+Refactored the python files associated with deployment further.
+Added additional docker commands to address pushing the images to dockerhub
+Added more documentations in Read_Me.ipynb that shows the input and output of the api

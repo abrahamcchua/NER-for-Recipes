@@ -3,3 +3,9 @@ docker build -t ner_for_recipes .
 
 # Run the docker image in port 80
 docker run -p 80:80 ner_for_recipes
+docker run -p 80:80 abrahamcchua/ner_for_recipes
+
+# Push the docker image to dockerhub
+docker login
+docker tag ner_for_recipes  abrahamcchua/ner_for_recipes
+docker push abrahamcchua/ner_for_recipes

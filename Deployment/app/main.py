@@ -20,13 +20,13 @@ app = FastAPI()
 model_instance = ner_model()
 
 @app.get("/")
-def initialize():
+async def initialize():
     return {
         "Message": "Successfully Initialized."
     }
 
 @app.post("/extract")
-def root(
+async def root(
     text: Text,
 ):
     return model_instance.get_predicted_entities(text.text) 
